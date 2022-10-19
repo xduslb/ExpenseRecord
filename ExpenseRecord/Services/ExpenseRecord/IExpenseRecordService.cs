@@ -5,9 +5,9 @@ namespace ExpenseRecord.Services.ExpenseRecord
 {
     public interface IExpenseRecordService
     {
-        Task<Response<ExpenseRecordDto>> CreateExpenseRecord(ExpenseRecordDto request);
-        Task<Response<List<ExpenseRecordDto>>> GetAllExpenseRecords();
-        Task<Response<string>> DeleteExpenseRecord(string id);
+        Task<Response<ExpenseRecordDto>> CreateExpenseRecordAsync(ExpenseRecordDto request);
+        Task<Response<List<ExpenseRecordDto>>> GetAllExpenseRecordsAsync();
+        Task<Response<string>> DeleteExpenseRecordAsync(string id);
         
     }
 }

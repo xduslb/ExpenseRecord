@@ -22,21 +22,21 @@ namespace ExpenseRecord.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateExpenseRecord([FromBody] ExpenseRecordDto request)
         {
-            var result = await _service.CreateExpenseRecord(request);
+            var result = await _service.CreateExpenseRecordAsync(request);
             return result.ToActionResult(this, _problemDetailsFactory);
         }
 
         [HttpGet("all")]
         public async Task<IActionResult> GetAllExpenseRecords()
         {
-            var result = await _service.GetAllExpenseRecords();
+            var result = await _service.GetAllExpenseRecordsAsync();
             return result.ToActionResult(this, _problemDetailsFactory);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteExpenseRecord([FromRoute] string id)
         {
-            var result = await _service.DeleteExpenseRecord(id);
+            var result = await _service.DeleteExpenseRecordAsync(id);
             return result.ToActionResult(this, _problemDetailsFactory);
         }
     }

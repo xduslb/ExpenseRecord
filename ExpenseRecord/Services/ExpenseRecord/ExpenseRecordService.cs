@@ -15,7 +15,7 @@ namespace ExpenseRecord.Services.ExpenseRecord
             _collection = client.GetDatabase("bootcamp").GetCollection<ExpenseRecordDto>("expenseRecords");
         }
 
-        public async Task<Response<ExpenseRecordDto>> CreateExpenseRecord(ExpenseRecordDto request)
+        public async Task<Response<ExpenseRecordDto>> CreateExpenseRecordAsync(ExpenseRecordDto request)
         {
             var item = new ExpenseRecordDto()
             {
@@ -36,7 +36,7 @@ namespace ExpenseRecord.Services.ExpenseRecord
             }
         }
 
-        public async Task<Response<List<ExpenseRecordDto>>> GetAllExpenseRecords()
+        public async Task<Response<List<ExpenseRecordDto>>> GetAllExpenseRecordsAsync()
         {
             try
             {
@@ -53,7 +53,7 @@ namespace ExpenseRecord.Services.ExpenseRecord
             }
         }
 
-        public async Task<Response<string>> DeleteExpenseRecord(string id)
+        public async Task<Response<string>> DeleteExpenseRecordAsync(string id)
         {
             try
             {

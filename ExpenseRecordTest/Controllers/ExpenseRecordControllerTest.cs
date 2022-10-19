@@ -16,7 +16,7 @@ namespace ExpenseRecordTest.Controllers
         {
             var expenseRecordServiceMock = new  Mock<IExpenseRecordService>();
             expenseRecordServiceMock
-                .Setup(item => item.CreateExpenseRecord(It.IsAny<ExpenseRecordDto>()))
+                .Setup(item => item.CreateExpenseRecordAsync(It.IsAny<ExpenseRecordDto>()))
                 .ReturnsAsync(new Response<ExpenseRecordDto>(HttpStatusCode.Created, new ExpenseRecordDto(){Id = "Test Item"}));
             var controller = new ExpenseRecordController(expenseRecordServiceMock.Object, It.IsAny<ProblemDetailsFactory>());
 
