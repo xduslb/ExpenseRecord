@@ -10,7 +10,7 @@
                 <td>{{item.description}}</td>
                 <td>{{item.type}}</td>
                 <td>{{item.amount}}</td>
-                <td>{{item.date | date :' mm/dd/yy H:mm'}}</td>
+                <td>{{item.date | date :' MM/dd/yy H:mm'}}</td>
                 <td><button (click)="delete(item.id)" style="width: 100px;">Delete</button></td>
             </tr>
         </ng-container>
