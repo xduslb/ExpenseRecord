@@ -23,7 +23,7 @@ namespace ExpenseRecord.Services.ExpenseRecord
                 Description = request.Description,
                 Type = request.Type,
                 Amount = request.Amount,
-                Date = DateTime.Now,
+                Date = request.Date??DateTime.Now,
             };
             try
             {
