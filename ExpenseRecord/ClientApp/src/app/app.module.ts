@@ -5,14 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CounterComponent } from './counter/counter.component';
-import {GreetingComponent} from "./greeting/greeting.component";
+import {ExpenseRecordListComponent} from "./record-list/record-list.component";
 
 @NgModule({
     declarations: [
         AppComponent,
-        CounterComponent,
-        GreetingComponent
+        ExpenseRecordListComponent,
     ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

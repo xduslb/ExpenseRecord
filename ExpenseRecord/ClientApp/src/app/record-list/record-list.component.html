@@ -1,0 +1,26 @@
+<div class="title">
+    <div class="list" style="margin-bottom: 10px;">
+        <table>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Date</th>
+        <ng-container *ngFor="let item of displayList ">
+            <tr>
+                <td>{{item.description}}</td>
+                <td>{{item.type}}</td>
+                <td>{{item.amount}}</td>
+                <td>{{item.date | date :' mm/dd/yy H:mm'}}</td>
+                <td><button (click)="delete(item.id)" style="width: 100px;">Delete</button></td>
+            </tr>
+        </ng-container>
+        <tr>
+            <td><input [(ngModel)]="newRecord.description" type="text"></td>
+            <td><input [(ngModel)]="newRecord.type" type="text"></td>
+            <td><input [(ngModel)]="newRecord.amount" type="text"></td>
+            <td><input [(ngModel)]="newRecord.date" type="datetime-local"></td>
+            <td><button (click)="create()" style="width: 100px;">Add</button></td>
+        </tr>
+        </table>
+    </div>
+</div>
